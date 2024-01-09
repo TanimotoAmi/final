@@ -10,3 +10,4 @@
         echo $list['drink_name'];
     }
     ?>
+<?php require 'footer.php'; ?>
