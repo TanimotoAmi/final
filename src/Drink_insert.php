@@ -1,17 +1,14 @@
 <?php require 'db-connect.php'; ?>
-<?php require 'header.php'; ?>
-<h1>飲料追加</h1>
 <?php
-    '<td>';                  
-        '<select name = "category_id">';
-			'<option value="1">コーヒー</option>';
-			'<option value="2">紅茶</option>';
-			'<option value="3">炭酸飲料</option>';
-			'<option value="4">ハーブティー</option>';
-			'<option value="5">お酒</option>';
-			'<option value="6">お茶</option>';
-		'</select>'; 
-                                
-    '</td>'; 
+//処理のみ
+$pdo=new PDO($connect,USER,PASS);
+if(!empty($_POST)){
+    $sql=$pdo->prepare('insert into Drinks(drink_name,category_ID) VALUES(?,?)');
+    $sql->execute([$_POST['name'],$_POST['category_id']]);
+    header("Location: Drinklist.php");
+    exit;
+}else{
+    header("Location: Drink_i_form.php");
+    exit;
+}
 ?>
-<?php require 'footer.php'; ?>

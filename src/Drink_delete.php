@@ -1,8 +1,9 @@
 <?php require 'db-connect.php'; ?>
-<?php require 'header.php'; ?>
-<h1>飲料削除</h1>
 <?php
     $pdo=new PDO($connect,USER,PASS);
-    $sql=$pdo->prepare('select * from Drinks');
+    $delete_Products=$pdo->prepare('delete from Drinks where drink_ID=?');
+    $delete_Products->execute([$_POST['drink_id']]);
+
+    header("Location: Drinklist.php");
+    exit;
 ?>
-<?php require 'footer.php'; ?>
