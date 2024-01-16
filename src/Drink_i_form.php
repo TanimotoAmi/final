@@ -14,7 +14,7 @@
 	<form action = "Drink_insert.php" method="post">
 	<label class="label">飲料名</label>
     <div class="control">
-        <input type = "text" class="input is-primary" name = "name" required>
+        <input type = "text" class="input is-primary" name = "name" placeholder="飲料名" required>
     </div>
 			<?php
     			echo  '<label class="label">カテゴリー</label>';

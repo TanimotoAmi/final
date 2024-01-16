@@ -13,7 +13,7 @@
 <form action = "category_insert.php" method="post">
 <label class="label">カテゴリー名</label>
 <div class="control">
-    <input type = "text" class="input is-primary" name = "name" required>
+    <input type = "text" class="input is-primary" name = "name" placeholder="カテゴリー" required>
 </div>
     <input class="button is-primary is-medium mx-auto my-3" type="submit" value="登録">
 </form>
