@@ -1,6 +1,6 @@
 <?php require 'db-connect.php'; ?>
 <?php require 'header.php'; ?>
-<h3 class="title">飲料一覧</h3>
+<h3 class="subtitle is-3">飲料一覧</h3>
     <?php
     $pdo=new PDO($connect,USER,PASS);
     $sql=$pdo->query('select Drinks.drink_ID,Drinks.drink_name,Categorys.category_name from Drinks Inner join Categorys on Drinks.category_ID = Categorys.category_ID');
@@ -20,5 +20,5 @@
     echo '</table>';
     
     ?>
-    <button onclick="location.href='menu.html'">一覧へ戻る</button>
+    <!-- <button onclick="location.href='menu.html'">一覧へ戻る</button> -->
 <?php require 'footer.php'; ?>
